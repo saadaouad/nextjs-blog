@@ -6,11 +6,12 @@ import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.css'
 
-function Post({ postData }: {
-  postData: {
-    title: string; date: string; contentHtml: string
-  }
-}) {
+type Props = {
+  postData: { title: string, date: string, contentHtml: string };
+}
+
+const Post = ({ postData }: Props) => {
+
   return (
     <Layout>
       <Head>

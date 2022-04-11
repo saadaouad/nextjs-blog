@@ -9,13 +9,15 @@ import styles from "./layout.module.css";
 const name = "Saad Aouad";
 export const siteTitle = "Next.js Sample Website";
 
+type Props = {
+  children: React.ReactNode;
+  home?: boolean,
+};
+
 function Layout({
   children,
   home
-}: {
-  children: React.ReactNode,
-  home?: boolean
-}) {
+}: Props) {
   return (
     <div className={styles.container}>
       <Head>

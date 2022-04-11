@@ -7,7 +7,15 @@ import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import utilStyles from "../styles/utils.module.css";
 
-function Home({ allPostsData }: { allPostsData: { date: string; title: string; id: string }[] }) {
+type Props = {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string
+  }[]
+};
+
+function Home({ allPostsData }: Props) {
 
   return (
     <Layout home>
